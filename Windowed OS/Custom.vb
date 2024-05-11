@@ -127,8 +127,8 @@ exitif:
     End Sub
 
     Private Sub Custom_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Try
-        Dim lst As ListBox = New ListBox()
+        Try
+            Dim lst As ListBox = New ListBox()
             lst.Items.AddRange(s_sv.Text.Split("::"))
             For i As Integer = 0 To lst.Items.Count - 1
                 lst.SelectedIndex = i
@@ -149,21 +149,21 @@ exitif:
                     AddHandler element.Click, Sub(sender2, eventargs2)
                                                   'Try
                                                   For i As Integer = 0 To lst.Items.Count - 1
-                                                          lst.SelectedIndex = i
-                                                          If lst.SelectedItem.ToString().StartsWith("\\") Then GoTo skiploops
-                                                          If lst.SelectedItem.ToString().StartsWith(element.Name) Then
-                                                              If lst.SelectedItem.ToString().Contains("Listener.Click") Then
-                                                                  Dim lst2 As ListBox = New ListBox()
-                                                                  lst2.Items.AddRange(lst.SelectedItem.ToString().Split("*"))
-                                                                  lst2.SelectedIndex = 1
-                                                                  Dim ss As String = lst2.SelectedItem.ToString()
-                                                                  execute(ss)
-                                                                  Exit Sub
-                                                              End If
+                                                      lst.SelectedIndex = i
+                                                      If lst.SelectedItem.ToString().StartsWith("\\") Then GoTo skiploops
+                                                      If lst.SelectedItem.ToString().StartsWith(element.Name) Then
+                                                          If lst.SelectedItem.ToString().Contains("Listener.Click") Then
+                                                              Dim lst2 As ListBox = New ListBox()
+                                                              lst2.Items.AddRange(lst.SelectedItem.ToString().Split("*"))
+                                                              lst2.SelectedIndex = 1
+                                                              Dim ss As String = lst2.SelectedItem.ToString()
+                                                              execute(ss)
+                                                              Exit Sub
                                                           End If
+                                                      End If
 skiploops:
-                                                      Next
-                                                      'Catch ex As Exception
+                                                  Next
+                                                  'Catch ex As Exception
                                                   '    throwexception(ex)
                                                   'End Try
                                               End Sub
@@ -532,9 +532,9 @@ skiploops:
                                                   End Sub
                 End If
             Next
-            'Catch ex As Exception
-        '    throwexception(ex)
-        'End Try
+        Catch ex As Exception
+            throwexception(ex)
+        End Try
     End Sub
 
     Private Sub Custom_VisibleChanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged

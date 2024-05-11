@@ -469,14 +469,14 @@ exitif:
         Next
         cust.s_sv.Text = TextBox1.Text.Replace(vbNewLine, "")
         cust.s_sv.Text = cust.s_sv.Text.Replace("   ", "")
-        'Try
-        cust.appname = Label8.Text
+        Try
+            cust.appname = Label8.Text
             Label8.Text = "Icon: "
             cust.Show()
-        'Catch ex As Exception
-        'MessageDialog.messagetext = ex.Message
-        'MessageDialog.ShowDialog()
-        'End Try
+        Catch ex As Exception
+            MessageDialog.messagetext = ex.Message
+            MessageDialog.ShowDialog()
+        End Try
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
