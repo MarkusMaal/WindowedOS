@@ -81,11 +81,11 @@ Voidscript is a custom programming language developed specifically for Windowed 
 
 ## Screenshots
 
-![Multitasking desktop](screenshots/2.png)
-![Initial setup](screenshots/9.png)
-![Tasks and resources](screenshots/3.png)
-![Lock screen](screenshots/4.png)
-![Transparent windows](screenshots/5.png)
-![Crash screen](screenshots/6.png)
-![Login screen](screenshots/7.png)
-![Settings window](screenshots/8.png)
+![Multitasking desktop](Screenshots/2.png)
+![Initial setup](Screenshots/9.png)
+![Tasks and resources](Screenshots/3.png)
+![Lock screen](Screenshots/4.png)
+![Transparent windows](Screenshots/5.png)
+![Crash screen](Screenshots/6.png)
+![Login screen](Screenshots/7.png)
+![Settings window](Screenshots/8.png)
